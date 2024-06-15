@@ -1,7 +1,16 @@
 {
-	// note: This file assumes that you use a .t3m file for your build options.
+	// note: This file assumes that you use a .t3m file for your build options that has the same basename as the (most outter/"first") directory
+	// that you opened in sublime text. Your file structure could then look like this:
+	// MyGame
+	//	- obj
+	//	- src
+	// 	- MyGame.t
+	//	- MyGame.t3m
+	//
 	// Also, if you don't have gargoyle-free installed, change the command to "frobs" (or whatever interpreter you would like to use) below
+	//
 	// INSTALL: copy the content of this file in ~/.config/sublime-text/Packages/User/TADS3.sublime-build
+
     "shell_cmd": "t3make -f \\$(basename $folder).t3m",
     "selector": "source.tads3",
     "file_regex": "^(.*):([0-9]+):?([0-9]+)?:?(.*)$",
