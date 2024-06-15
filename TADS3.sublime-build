@@ -10,7 +10,7 @@
     	{
     		"name": "Build and run",
     		// note: if you don't have gargoyle-free installed, you may as well change the below line to e.g. "frob" 
-    		"shell_cmd": "dirname=\\$(basename $folder);t3make -f \\$dirname.t3m; gargoyle-free \\$dirname.t3"
+    		"shell_cmd": "dirname=\\$(basename $folder);t3make -f \\$dirname.t3m && gargoyle-free \\$dirname.t3"
     	}
     ]
 }
