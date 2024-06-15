@@ -1,0 +1,16 @@
+{
+	// note: This file assumes that you use a .t3m file for your build options.
+	// Also, if you don't have gargoyle-free installed, change the command to "frobs" (or whatever interpreter you would like to use) below
+	// INSTALL: copy the content of this file in ~/.config/sublime-text/Packages/User/TADS3.sublime-build
+    "shell_cmd": "t3make -f \\$(basename $folder).t3m",
+    "selector": "source.tads3",
+    "file_regex": "^(.*):([0-9]+):?([0-9]+)?:?(.*)$",
+    "working_dir": "$folder",
+    "variants": [
+    	{
+    		"name": "Build and run",
+    		// note: if you don't have gargoyle-free installed, you may as well change the below line to e.g. "frob" 
+    		"shell_cmd": "dirname=\\$(basename $folder);t3make -f \\$dirname.t3m; gargoyle-free \\$dirname.t3"
+    	}
+    ]
+}
