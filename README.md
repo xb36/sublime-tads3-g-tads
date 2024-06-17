@@ -1,2 +1,2 @@
 # configs-and-scripts
-A collection of config files (or alike) for different applications
+A collection of sublime config files (and alike) to be used with TADS3 / G-TADS
